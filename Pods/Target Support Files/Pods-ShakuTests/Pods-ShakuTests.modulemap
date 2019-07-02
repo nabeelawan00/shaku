@@ -1,0 +1,6 @@
+framework module Pods_ShakuTests {
+  umbrella header "Pods-ShakuTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

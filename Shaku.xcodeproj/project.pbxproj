@@ -1,0 +1,960 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F66CC61221872C600404F2E /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC5F221872C600404F2E /* WebServices.swift */; };
+		0F66CC632218748600404F2E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC622218748600404F2E /* Category.swift */; };
+		0F66CC65221875AA00404F2E /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC64221875AA00404F2E /* Coupon.swift */; };
+		0F66CC6722187ADA00404F2E /* CouponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC6622187ADA00404F2E /* CouponCell.swift */; };
+		0F66CC692218857C00404F2E /* RootStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC682218857C00404F2E /* RootStore.swift */; };
+		0F66CC6B22188BBB00404F2E /* CatogoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC6A22188BBB00404F2E /* CatogoryCell.swift */; };
+		0F66CC6D22188E0D00404F2E /* CouponsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC6C22188E0D00404F2E /* CouponsHome.swift */; };
+		0F66CC6F22188F8000404F2E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC6E22188F8000404F2E /* ItemCell.swift */; };
+		4D64E614FFF81390B6FA30EF /* Pods_Shaku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532410416159E31E51C67702 /* Pods_Shaku.framework */; };
+		7D0335502215E96B0016D2F4 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D03354F2215E96B0016D2F4 /* StoreViewController.swift */; };
+		7D0335522215EA080016D2F4 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0335512215EA080016D2F4 /* StoreCollectionViewCell.swift */; };
+		7D0335542215F13E0016D2F4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0335532215F13E0016D2F4 /* ProductTableViewCell.swift */; };
+		7D832257221494EA0070E035 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D832256221494EA0070E035 /* ProductViewController.swift */; };
+		870C53AD2219FB4B0079ECF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C53AC2219FB4B0079ECF5 /* LoginViewController.swift */; };
+		870C53AF2219FB5C0079ECF5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C53AE2219FB5C0079ECF5 /* SignUpViewController.swift */; };
+		870C53B12219FE260079ECF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 870C53B02219FE260079ECF5 /* GoogleService-Info.plist */; };
+		873C6FB4220CAE810015A1B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FB3220CAE810015A1B5 /* AppDelegate.swift */; };
+		873C6FB6220CAE810015A1B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FB5220CAE810015A1B5 /* ViewController.swift */; };
+		873C6FB9220CAE810015A1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873C6FB7220CAE810015A1B5 /* Main.storyboard */; };
+		873C6FBC220CAE810015A1B5 /* Shaku.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FBA220CAE810015A1B5 /* Shaku.xcdatamodeld */; };
+		873C6FBE220CAE830015A1B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 873C6FBD220CAE830015A1B5 /* Assets.xcassets */; };
+		873C6FC1220CAE830015A1B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873C6FBF220CAE830015A1B5 /* LaunchScreen.storyboard */; };
+		873C6FCC220CAE830015A1B5 /* ShakuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FCB220CAE830015A1B5 /* ShakuTests.swift */; };
+		873C6FD7220CAE840015A1B5 /* ShakuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FD6220CAE840015A1B5 /* ShakuUITests.swift */; };
+		873C6FE8220CB0000015A1B5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FE7220CAFFF0015A1B5 /* SWRevealViewController.m */; };
+		873C6FEB220CB2A30015A1B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FEA220CB2A30015A1B5 /* HomeViewController.swift */; };
+		873C6FEE220CB7FF0015A1B5 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FED220CB7FF0015A1B5 /* ItemsViewController.swift */; };
+		876F584622148D4400A6D830 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F584422148D4300A6D830 /* MenuTableViewCell.swift */; };
+		876F584722148D4400A6D830 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F584522148D4300A6D830 /* MenuViewController.swift */; };
+		87F504CC220E0CB300C08A56 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F504CB220E0CB300C08A56 /* CategoryViewController.swift */; };
+		87F504CF220E0FE800C08A56 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F504CE220E0FE800C08A56 /* CouponViewController.swift */; };
+		954111FABE75F077DC52A43B /* Pods_ShakuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA340F997FCEDA92B03086B0 /* Pods_ShakuUITests.framework */; };
+		D4B28336BA5C9E54A996009F /* Pods_ShakuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC81A1FB2E5EC4585E6A754 /* Pods_ShakuTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		873C6FC8220CAE830015A1B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 873C6FA8220CAE810015A1B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 873C6FAF220CAE810015A1B5;
+			remoteInfo = Shaku;
+		};
+		873C6FD3220CAE830015A1B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 873C6FA8220CAE810015A1B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 873C6FAF220CAE810015A1B5;
+			remoteInfo = Shaku;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0030A6B5666AC6087B5CCA7C /* Pods-ShakuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakuUITests/Pods-ShakuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F66CC5F221872C600404F2E /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		0F66CC622218748600404F2E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0F66CC64221875AA00404F2E /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		0F66CC6622187ADA00404F2E /* CouponCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCell.swift; sourceTree = "<group>"; };
+		0F66CC682218857C00404F2E /* RootStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStore.swift; sourceTree = "<group>"; };
+		0F66CC6A22188BBB00404F2E /* CatogoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatogoryCell.swift; sourceTree = "<group>"; };
+		0F66CC6C22188E0D00404F2E /* CouponsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsHome.swift; sourceTree = "<group>"; };
+		0F66CC6E22188F8000404F2E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		17E06CFF35AE1306B222ED44 /* Pods-ShakuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakuUITests/Pods-ShakuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		532410416159E31E51C67702 /* Pods_Shaku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shaku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC81A1FB2E5EC4585E6A754 /* Pods_ShakuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF84204775FFAC7AA9D295E /* Pods-ShakuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakuTests/Pods-ShakuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D03354F2215E96B0016D2F4 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		7D0335512215EA080016D2F4 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		7D0335532215F13E0016D2F4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		7D832256221494EA0070E035 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		870C53AC2219FB4B0079ECF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		870C53AE2219FB5C0079ECF5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		870C53B02219FE260079ECF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		873C6FB0220CAE810015A1B5 /* Shaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		873C6FB3220CAE810015A1B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		873C6FB5220CAE810015A1B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		873C6FB8220CAE810015A1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		873C6FBB220CAE810015A1B5 /* Shaku.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shaku.xcdatamodel; sourceTree = "<group>"; };
+		873C6FBD220CAE830015A1B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		873C6FC0220CAE830015A1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		873C6FC2220CAE830015A1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		873C6FC7220CAE830015A1B5 /* ShakuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		873C6FCB220CAE830015A1B5 /* ShakuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakuTests.swift; sourceTree = "<group>"; };
+		873C6FCD220CAE830015A1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		873C6FD2220CAE830015A1B5 /* ShakuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		873C6FD6220CAE840015A1B5 /* ShakuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakuUITests.swift; sourceTree = "<group>"; };
+		873C6FD8220CAE840015A1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		873C6FE4220CAFFC0015A1B5 /* Shaku-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shaku-Bridging-Header.h"; sourceTree = "<group>"; };
+		873C6FE6220CAFFF0015A1B5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		873C6FE7220CAFFF0015A1B5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		873C6FEA220CB2A30015A1B5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		873C6FED220CB7FF0015A1B5 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		876F584422148D4300A6D830 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		876F584522148D4300A6D830 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		87F504CB220E0CB300C08A56 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		87F504CE220E0FE800C08A56 /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
+		AB24F6BAD64E2D492D474CC7 /* Pods-ShakuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakuTests/Pods-ShakuTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBAC542A8A2ED27D128EA1FF /* Pods-Shaku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shaku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shaku/Pods-Shaku.release.xcconfig"; sourceTree = "<group>"; };
+		E1FB85AEFE9B031E7D7786C0 /* Pods-Shaku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shaku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shaku/Pods-Shaku.debug.xcconfig"; sourceTree = "<group>"; };
+		FA340F997FCEDA92B03086B0 /* Pods_ShakuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		873C6FAD220CAE810015A1B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D64E614FFF81390B6FA30EF /* Pods_Shaku.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873C6FC4220CAE830015A1B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B28336BA5C9E54A996009F /* Pods_ShakuTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873C6FCF220CAE830015A1B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954111FABE75F077DC52A43B /* Pods_ShakuUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F66CC5D2218715900404F2E /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				0F66CC5F221872C600404F2E /* WebServices.swift */,
+				0F66CC622218748600404F2E /* Category.swift */,
+				0F66CC64221875AA00404F2E /* Coupon.swift */,
+				0F66CC682218857C00404F2E /* RootStore.swift */,
+				0F66CC6C22188E0D00404F2E /* CouponsHome.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		7D832255221494CF0070E035 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				7D832256221494EA0070E035 /* ProductViewController.swift */,
+				7D0335532215F13E0016D2F4 /* ProductTableViewCell.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		870C53AA2219F88E0079ECF5 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				870C53AE2219FB5C0079ECF5 /* SignUpViewController.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		870C53AB2219FB240079ECF5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				870C53AC2219FB4B0079ECF5 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		870C53B2221A02210079ECF5 /* userDefaults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = userDefaults;
+			sourceTree = "<group>";
+		};
+		873C6FA7220CAE810015A1B5 = {
+			isa = PBXGroup;
+			children = (
+				873C6FB2220CAE810015A1B5 /* Shaku */,
+				873C6FCA220CAE830015A1B5 /* ShakuTests */,
+				873C6FD5220CAE830015A1B5 /* ShakuUITests */,
+				873C6FB1220CAE810015A1B5 /* Products */,
+				99F01F34980B2DE72CAE8833 /* Pods */,
+				BB7D02C12ACC80C2C0771864 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		873C6FB1220CAE810015A1B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				873C6FB0220CAE810015A1B5 /* Shaku.app */,
+				873C6FC7220CAE830015A1B5 /* ShakuTests.xctest */,
+				873C6FD2220CAE830015A1B5 /* ShakuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		873C6FB2220CAE810015A1B5 /* Shaku */ = {
+			isa = PBXGroup;
+			children = (
+				870C53B2221A02210079ECF5 /* userDefaults */,
+				870C53AB2219FB240079ECF5 /* Login */,
+				870C53AA2219F88E0079ECF5 /* Sign Up */,
+				7D832255221494CF0070E035 /* Product */,
+				876F584322148D4300A6D830 /* Menu */,
+				87F504D0220E1AD500C08A56 /* Store */,
+				87F504CD220E0FD700C08A56 /* Coupon */,
+				87F504CA220E0CA400C08A56 /* Category */,
+				873C6FEC220CB7EE0015A1B5 /* ItemsView */,
+				873C6FE9220CB27E0015A1B5 /* HomeVIew */,
+				0F66CC5D2218715900404F2E /* WebService */,
+				873C6FB3220CAE810015A1B5 /* AppDelegate.swift */,
+				873C6FB5220CAE810015A1B5 /* ViewController.swift */,
+				873C6FB7220CAE810015A1B5 /* Main.storyboard */,
+				873C6FBD220CAE830015A1B5 /* Assets.xcassets */,
+				873C6FBF220CAE830015A1B5 /* LaunchScreen.storyboard */,
+				873C6FC2220CAE830015A1B5 /* Info.plist */,
+				870C53B02219FE260079ECF5 /* GoogleService-Info.plist */,
+				873C6FBA220CAE810015A1B5 /* Shaku.xcdatamodeld */,
+				873C6FE6220CAFFF0015A1B5 /* SWRevealViewController.h */,
+				873C6FE7220CAFFF0015A1B5 /* SWRevealViewController.m */,
+				873C6FE4220CAFFC0015A1B5 /* Shaku-Bridging-Header.h */,
+			);
+			path = Shaku;
+			sourceTree = "<group>";
+		};
+		873C6FCA220CAE830015A1B5 /* ShakuTests */ = {
+			isa = PBXGroup;
+			children = (
+				873C6FCB220CAE830015A1B5 /* ShakuTests.swift */,
+				873C6FCD220CAE830015A1B5 /* Info.plist */,
+			);
+			path = ShakuTests;
+			sourceTree = "<group>";
+		};
+		873C6FD5220CAE830015A1B5 /* ShakuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				873C6FD6220CAE840015A1B5 /* ShakuUITests.swift */,
+				873C6FD8220CAE840015A1B5 /* Info.plist */,
+			);
+			path = ShakuUITests;
+			sourceTree = "<group>";
+		};
+		873C6FE9220CB27E0015A1B5 /* HomeVIew */ = {
+			isa = PBXGroup;
+			children = (
+				873C6FEA220CB2A30015A1B5 /* HomeViewController.swift */,
+			);
+			path = HomeVIew;
+			sourceTree = "<group>";
+		};
+		873C6FEC220CB7EE0015A1B5 /* ItemsView */ = {
+			isa = PBXGroup;
+			children = (
+				873C6FED220CB7FF0015A1B5 /* ItemsViewController.swift */,
+				0F66CC6E22188F8000404F2E /* ItemCell.swift */,
+			);
+			path = ItemsView;
+			sourceTree = "<group>";
+		};
+		876F584322148D4300A6D830 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				876F584422148D4300A6D830 /* MenuTableViewCell.swift */,
+				876F584522148D4300A6D830 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		87F504CA220E0CA400C08A56 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				87F504CB220E0CB300C08A56 /* CategoryViewController.swift */,
+				0F66CC6A22188BBB00404F2E /* CatogoryCell.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		87F504CD220E0FD700C08A56 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				87F504CE220E0FE800C08A56 /* CouponViewController.swift */,
+				0F66CC6622187ADA00404F2E /* CouponCell.swift */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		87F504D0220E1AD500C08A56 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				7D03354F2215E96B0016D2F4 /* StoreViewController.swift */,
+				7D0335512215EA080016D2F4 /* StoreCollectionViewCell.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		99F01F34980B2DE72CAE8833 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB85AEFE9B031E7D7786C0 /* Pods-Shaku.debug.xcconfig */,
+				CBAC542A8A2ED27D128EA1FF /* Pods-Shaku.release.xcconfig */,
+				5EF84204775FFAC7AA9D295E /* Pods-ShakuTests.debug.xcconfig */,
+				AB24F6BAD64E2D492D474CC7 /* Pods-ShakuTests.release.xcconfig */,
+				0030A6B5666AC6087B5CCA7C /* Pods-ShakuUITests.debug.xcconfig */,
+				17E06CFF35AE1306B222ED44 /* Pods-ShakuUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB7D02C12ACC80C2C0771864 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				532410416159E31E51C67702 /* Pods_Shaku.framework */,
+				5AC81A1FB2E5EC4585E6A754 /* Pods_ShakuTests.framework */,
+				FA340F997FCEDA92B03086B0 /* Pods_ShakuUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		873C6FAF220CAE810015A1B5 /* Shaku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 873C6FDB220CAE840015A1B5 /* Build configuration list for PBXNativeTarget "Shaku" */;
+			buildPhases = (
+				521575D060B36AB588D931DA /* [CP] Check Pods Manifest.lock */,
+				873C6FAC220CAE810015A1B5 /* Sources */,
+				873C6FAD220CAE810015A1B5 /* Frameworks */,
+				873C6FAE220CAE810015A1B5 /* Resources */,
+				DB2DD036811A36862CD92E80 /* [CP] Embed Pods Frameworks */,
+				0E6E0B3C47B2710736E15464 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shaku;
+			productName = Shaku;
+			productReference = 873C6FB0220CAE810015A1B5 /* Shaku.app */;
+			productType = "com.apple.product-type.application";
+		};
+		873C6FC6220CAE830015A1B5 /* ShakuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 873C6FDE220CAE840015A1B5 /* Build configuration list for PBXNativeTarget "ShakuTests" */;
+			buildPhases = (
+				30DB0D5CDE0F436A181AB228 /* [CP] Check Pods Manifest.lock */,
+				873C6FC3220CAE830015A1B5 /* Sources */,
+				873C6FC4220CAE830015A1B5 /* Frameworks */,
+				873C6FC5220CAE830015A1B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				873C6FC9220CAE830015A1B5 /* PBXTargetDependency */,
+			);
+			name = ShakuTests;
+			productName = ShakuTests;
+			productReference = 873C6FC7220CAE830015A1B5 /* ShakuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		873C6FD1220CAE830015A1B5 /* ShakuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 873C6FE1220CAE840015A1B5 /* Build configuration list for PBXNativeTarget "ShakuUITests" */;
+			buildPhases = (
+				59509C5F75E96B3A996F292E /* [CP] Check Pods Manifest.lock */,
+				873C6FCE220CAE830015A1B5 /* Sources */,
+				873C6FCF220CAE830015A1B5 /* Frameworks */,
+				873C6FD0220CAE830015A1B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				873C6FD4220CAE830015A1B5 /* PBXTargetDependency */,
+			);
+			name = ShakuUITests;
+			productName = ShakuUITests;
+			productReference = 873C6FD2220CAE830015A1B5 /* ShakuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		873C6FA8220CAE810015A1B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Qazi Ammar Arshad";
+				TargetAttributes = {
+					873C6FAF220CAE810015A1B5 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					873C6FC6220CAE830015A1B5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 873C6FAF220CAE810015A1B5;
+					};
+					873C6FD1220CAE830015A1B5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 873C6FAF220CAE810015A1B5;
+					};
+				};
+			};
+			buildConfigurationList = 873C6FAB220CAE810015A1B5 /* Build configuration list for PBXProject "Shaku" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 873C6FA7220CAE810015A1B5;
+			productRefGroup = 873C6FB1220CAE810015A1B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				873C6FAF220CAE810015A1B5 /* Shaku */,
+				873C6FC6220CAE830015A1B5 /* ShakuTests */,
+				873C6FD1220CAE830015A1B5 /* ShakuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		873C6FAE220CAE810015A1B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873C6FC1220CAE830015A1B5 /* LaunchScreen.storyboard in Resources */,
+				870C53B12219FE260079ECF5 /* GoogleService-Info.plist in Resources */,
+				873C6FBE220CAE830015A1B5 /* Assets.xcassets in Resources */,
+				873C6FB9220CAE810015A1B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873C6FC5220CAE830015A1B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873C6FD0220CAE830015A1B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E6E0B3C47B2710736E15464 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shaku/Pods-Shaku-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shaku/Pods-Shaku-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30DB0D5CDE0F436A181AB228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShakuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		521575D060B36AB588D931DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shaku-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59509C5F75E96B3A996F292E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShakuUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2DD036811A36862CD92E80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shaku/Pods-Shaku-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CarbonKit/CarbonKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CarbonKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shaku/Pods-Shaku-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		873C6FAC220CAE810015A1B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873C6FEB220CB2A30015A1B5 /* HomeViewController.swift in Sources */,
+				876F584722148D4400A6D830 /* MenuViewController.swift in Sources */,
+				873C6FEE220CB7FF0015A1B5 /* ItemsViewController.swift in Sources */,
+				870C53AD2219FB4B0079ECF5 /* LoginViewController.swift in Sources */,
+				0F66CC65221875AA00404F2E /* Coupon.swift in Sources */,
+				7D0335522215EA080016D2F4 /* StoreCollectionViewCell.swift in Sources */,
+				7D832257221494EA0070E035 /* ProductViewController.swift in Sources */,
+				87F504CF220E0FE800C08A56 /* CouponViewController.swift in Sources */,
+				873C6FBC220CAE810015A1B5 /* Shaku.xcdatamodeld in Sources */,
+				0F66CC692218857C00404F2E /* RootStore.swift in Sources */,
+				0F66CC6D22188E0D00404F2E /* CouponsHome.swift in Sources */,
+				0F66CC6B22188BBB00404F2E /* CatogoryCell.swift in Sources */,
+				873C6FB6220CAE810015A1B5 /* ViewController.swift in Sources */,
+				876F584622148D4400A6D830 /* MenuTableViewCell.swift in Sources */,
+				7D0335542215F13E0016D2F4 /* ProductTableViewCell.swift in Sources */,
+				0F66CC6F22188F8000404F2E /* ItemCell.swift in Sources */,
+				0F66CC632218748600404F2E /* Category.swift in Sources */,
+				7D0335502215E96B0016D2F4 /* StoreViewController.swift in Sources */,
+				870C53AF2219FB5C0079ECF5 /* SignUpViewController.swift in Sources */,
+				873C6FB4220CAE810015A1B5 /* AppDelegate.swift in Sources */,
+				873C6FE8220CB0000015A1B5 /* SWRevealViewController.m in Sources */,
+				0F66CC6722187ADA00404F2E /* CouponCell.swift in Sources */,
+				0F66CC61221872C600404F2E /* WebServices.swift in Sources */,
+				87F504CC220E0CB300C08A56 /* CategoryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873C6FC3220CAE830015A1B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873C6FCC220CAE830015A1B5 /* ShakuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873C6FCE220CAE830015A1B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873C6FD7220CAE840015A1B5 /* ShakuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		873C6FC9220CAE830015A1B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 873C6FAF220CAE810015A1B5 /* Shaku */;
+			targetProxy = 873C6FC8220CAE830015A1B5 /* PBXContainerItemProxy */;
+		};
+		873C6FD4220CAE830015A1B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 873C6FAF220CAE810015A1B5 /* Shaku */;
+			targetProxy = 873C6FD3220CAE830015A1B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		873C6FB7220CAE810015A1B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				873C6FB8220CAE810015A1B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		873C6FBF220CAE830015A1B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				873C6FC0220CAE830015A1B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		873C6FD9220CAE840015A1B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		873C6FDA220CAE840015A1B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		873C6FDC220CAE840015A1B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1FB85AEFE9B031E7D7786C0 /* Pods-Shaku.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876UF39PZ6;
+				INFOPLIST_FILE = Shaku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ammar.Shaku;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shaku/Shaku-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		873C6FDD220CAE840015A1B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBAC542A8A2ED27D128EA1FF /* Pods-Shaku.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876UF39PZ6;
+				INFOPLIST_FILE = Shaku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ammar.Shaku;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shaku/Shaku-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		873C6FDF220CAE840015A1B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF84204775FFAC7AA9D295E /* Pods-ShakuTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876UF39PZ6;
+				INFOPLIST_FILE = ShakuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ammar.ShakuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shaku.app/Shaku";
+			};
+			name = Debug;
+		};
+		873C6FE0220CAE840015A1B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB24F6BAD64E2D492D474CC7 /* Pods-ShakuTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876UF39PZ6;
+				INFOPLIST_FILE = ShakuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ammar.ShakuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shaku.app/Shaku";
+			};
+			name = Release;
+		};
+		873C6FE2220CAE840015A1B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0030A6B5666AC6087B5CCA7C /* Pods-ShakuUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876UF39PZ6;
+				INFOPLIST_FILE = ShakuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ammar.ShakuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shaku;
+			};
+			name = Debug;
+		};
+		873C6FE3220CAE840015A1B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17E06CFF35AE1306B222ED44 /* Pods-ShakuUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 876UF39PZ6;
+				INFOPLIST_FILE = ShakuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ammar.ShakuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shaku;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		873C6FAB220CAE810015A1B5 /* Build configuration list for PBXProject "Shaku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873C6FD9220CAE840015A1B5 /* Debug */,
+				873C6FDA220CAE840015A1B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		873C6FDB220CAE840015A1B5 /* Build configuration list for PBXNativeTarget "Shaku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873C6FDC220CAE840015A1B5 /* Debug */,
+				873C6FDD220CAE840015A1B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		873C6FDE220CAE840015A1B5 /* Build configuration list for PBXNativeTarget "ShakuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873C6FDF220CAE840015A1B5 /* Debug */,
+				873C6FE0220CAE840015A1B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		873C6FE1220CAE840015A1B5 /* Build configuration list for PBXNativeTarget "ShakuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873C6FE2220CAE840015A1B5 /* Debug */,
+				873C6FE3220CAE840015A1B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		873C6FBA220CAE810015A1B5 /* Shaku.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				873C6FBB220CAE810015A1B5 /* Shaku.xcdatamodel */,
+			);
+			currentVersion = 873C6FBB220CAE810015A1B5 /* Shaku.xcdatamodel */;
+			path = Shaku.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 873C6FA8220CAE810015A1B5 /* Project object */;
+}
