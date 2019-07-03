@@ -36,6 +36,7 @@
 		873C6FEE220CB7FF0015A1B5 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C6FED220CB7FF0015A1B5 /* ItemsViewController.swift */; };
 		876F584622148D4400A6D830 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F584422148D4300A6D830 /* MenuTableViewCell.swift */; };
 		876F584722148D4400A6D830 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F584522148D4300A6D830 /* MenuViewController.swift */; };
+		87EF6D9622CC990300D6968B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EF6D9522CC990300D6968B /* Extensions.swift */; };
 		87F504CC220E0CB300C08A56 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F504CB220E0CB300C08A56 /* CategoryViewController.swift */; };
 		87F504CF220E0FE800C08A56 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F504CE220E0FE800C08A56 /* CouponViewController.swift */; };
 		954111FABE75F077DC52A43B /* Pods_ShakuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA340F997FCEDA92B03086B0 /* Pods_ShakuUITests.framework */; };
@@ -101,6 +102,7 @@
 		873C6FED220CB7FF0015A1B5 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		876F584422148D4300A6D830 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		876F584522148D4300A6D830 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		87EF6D9522CC990300D6968B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		87F504CB220E0CB300C08A56 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		87F504CE220E0FE800C08A56 /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		AB24F6BAD64E2D492D474CC7 /* Pods-ShakuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakuTests/Pods-ShakuTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		873C6FB2220CAE810015A1B5 /* Shaku */ = {
 			isa = PBXGroup;
 			children = (
+				87EF6D9422CC98EE00D6968B /* Extension */,
 				870C53B2221A02210079ECF5 /* userDefaults */,
 				870C53AB2219FB240079ECF5 /* Login */,
 				870C53AA2219F88E0079ECF5 /* Sign Up */,
@@ -274,6 +277,14 @@
 				876F584522148D4300A6D830 /* MenuViewController.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		87EF6D9422CC98EE00D6968B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				87EF6D9522CC990300D6968B /* Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		87F504CA220E0CA400C08A56 /* Category */ = {
@@ -599,6 +610,7 @@
 				7D0335502215E96B0016D2F4 /* StoreViewController.swift in Sources */,
 				870C53AF2219FB5C0079ECF5 /* SignUpViewController.swift in Sources */,
 				873C6FB4220CAE810015A1B5 /* AppDelegate.swift in Sources */,
+				87EF6D9622CC990300D6968B /* Extensions.swift in Sources */,
 				873C6FE8220CB0000015A1B5 /* SWRevealViewController.m in Sources */,
 				0F66CC6722187ADA00404F2E /* CouponCell.swift in Sources */,
 				0F66CC61221872C600404F2E /* WebServices.swift in Sources */,

@@ -12,6 +12,10 @@ import GoogleSignIn
 class LoginViewController: UIViewController {
 
     let delegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.uiDelegate = self
@@ -22,7 +26,23 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
+    @IBAction func signUpBtn(_ sender: UIButton) {
+        
+        if checkFieldsAreEmpty() {
+            self.showAlert(title: "Shaku", message: "Please fill all fields")
+        } else {
+//            email and password check.
+//            fildes are not empty so send the data to server.
+//            make the server request and send data to senrver.
+            callAPi()
+            
+        }
+        
 
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -33,6 +53,43 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+// Custom Function Extension.
+extension LoginViewController {
+    
+//    function check that is fields are empty return true is fields are empty.
+    func checkFieldsAreEmpty() -> Bool {
+        if emailTF.text!.isEmpty || passwordTF.text!.isEmpty {
+            return true
+        }
+        return false
+    }
+    func isEmailCorrect(email: String) -> Bool {
+        
+        return true
+    }
+    
+    func isPasswrodCorrect(password: String) -> Bool {
+        
+        return true
+    }
+//    send data to server. calling API.
+    func callAPi() {
+        
+        let completeUrl = URL(string: WebServices.skakuBaseURL + APIEnum.auth.rawValue)
+        let paremeters = ["email": emailTF.text!,
+                          "password": passwordTF.text!]
+        
+        WebServices.callApiWith(url: completeUrl!, method: .post, parameters: paremeters, withSucces: { (responseObject) in
+            print(responseObject)
+        }) { (error) in
+            self.showAlert(title: "Shaku", message: error)
+        }
+        
+    }
+    
+    
 }
 
 //google extension
