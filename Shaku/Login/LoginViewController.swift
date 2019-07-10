@@ -76,11 +76,8 @@ extension LoginViewController {
     func callAPi(email: String?, password: String?) {
         
         self.delegate.showActivityIndicatory(uiView: self.view)
-        
         let completeUrl = URL(string: WebServices.skakuBaseURL + APIEnum.auth.rawValue)
-        
         var paremeters = ["":""]
-        
         if email != nil {
              paremeters = ["email": email!,
                            "password": password!]
@@ -88,8 +85,6 @@ extension LoginViewController {
              paremeters = ["email": emailTF.text!,
                            "password": passwordTF.text!]
         }
-        
-        
         
         WebServices.callApiWith(url: completeUrl!, method: .post, parameters: paremeters, withSucces: { (responseObject) in
             let login = LoginModel(response: responseObject)

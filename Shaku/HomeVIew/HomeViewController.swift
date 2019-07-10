@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import Alamofire
 import CarbonKit
 
 class HomeViewController: UIViewController {
     
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    var coupon: RootCoupon?
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         carbonKit()
@@ -45,17 +48,17 @@ class HomeViewController: UIViewController {
         self.revealViewController().rearViewRevealDisplacement = 0
         self.revealViewController()?.frontViewController.viewWillDisappear(true)
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 
@@ -77,6 +80,7 @@ extension HomeViewController : CarbonTabSwipeNavigationDelegate {
 // Custom function extension
 extension HomeViewController {
     
-//    call api on when screen appears.
-   
+    //    call api on when screen appears.
+    
+    
 }

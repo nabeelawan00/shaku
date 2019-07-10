@@ -10,25 +10,25 @@ import UIKit
 import MBProgressHUD
 
 class ItemsViewController: UIViewController {
-
+    
+    let appdelegat = UIApplication.shared.delegate as! AppDelegate
     @IBOutlet weak fileprivate var tableView: UITableView!
-    fileprivate var couponHome : [CouponHome]?
+    var homeModel: RootCoupon?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        callApi()
+        callApi()
     }
-
 }
 
 extension ItemsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return couponHome?.count ?? 0
+        return homeModel?.coupons?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemCell
-        if let item = couponHome?[indexPath.item]{
+        if let item = homeModel?.coupons?[indexPath.item]{
             cell.configItemCell(item: item, indexPath: indexPath)
         }
         return cell
@@ -39,42 +39,30 @@ extension ItemsViewController: UITableViewDataSource {
 // Custom fucntio extension
 extension ItemsViewController {
     
-//     send data to server.
-    func callingApi() {
-
-        let completeURL = URL(string: WebServices.baseUrl + APIEnum.home.rawValue)!
-        WebServices.callApiWith(url: completeURL, method: .get, parameters: nil, withSucces: { (responseObject) in
-            print(responseObject)
-//            parse items.
-        }) { (error) in
-            self.showAlert(title: "Shaku", message: error)
-        }
-    }
-//
     fileprivate func callApi (){
-        MBProgressHUD.showAdded(to: self.view, animated: true)
-        let completeURL = WebServices.baseUrl + APIEnum.home.rawValue
         
-        WebServices.URLResponse(completeURL, method: .get, parameters: nil, withSuccess: { [weak self] (data) in
-            
-            guard let strongSelf = self else {return}
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        let completeUrl =  WebServices.skakuBaseURL + APIEnum.home.rawValue
+        
+        WebServices.URLResponse(completeUrl, method: .post, parameters: nil, withSuccess: { [weak self] (data) in
+            MBProgressHUD.hide(for: self!.view, animated: true)
             let decoder = JSONDecoder()
             do{
-                MBProgressHUD.hide(for: strongSelf.view , animated: true)
-                let response = try decoder.decode(RootClass.self, from: data)
+                let response = try decoder.decode(RootCoupon.self, from: data)
                 print(response)
                 if let strongSelf = self {
-                    strongSelf.couponHome = response.coupons
+                    strongSelf.homeModel = response
                     strongSelf.tableView.reloadData()
                 }
+                
             }catch let error{
                 print(error.localizedDescription)
-                MBProgressHUD.hide(for: strongSelf.view, animated: true)
+                
             }
         }) { (error) in
-            print(error)
-            self.showAlert(title: "Shaku", message: error)
             MBProgressHUD.hide(for: self.view, animated: true)
+            print(error)
+            self.showAlert(message: error)
         }
     }
 }

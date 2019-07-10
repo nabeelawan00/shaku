@@ -28,7 +28,7 @@ class ItemCell: UITableViewCell {
 }
 extension ItemCell {
     
-    func configItemCell(item :CouponHome , indexPath: IndexPath){
+    func configItemCell(item: Coupon , indexPath: IndexPath){
         expirdate.text = item.expiration
         mangnitLable.text = item.title
         let url = item.image
