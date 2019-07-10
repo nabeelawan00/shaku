@@ -39,7 +39,8 @@ extension CategoryViewController: UITableViewDataSource {
 extension CategoryViewController {
     fileprivate func callApi (){
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        WebServices.URLResponse("http://api.shaku.it/categories.php", method: .get, parameters: nil, withSuccess: { [weak self] (data) in
+        let completeURL = WebServices.baseUrl + APIEnum.categories.rawValue
+        WebServices.URLResponse(completeURL, method: .get, parameters: nil, withSuccess: { [weak self] (data) in
             
             guard let strongSelf = self else {return}
             let decoder = JSONDecoder()
@@ -56,7 +57,7 @@ extension CategoryViewController {
                 MBProgressHUD.hide(for: strongSelf.view, animated: true)
             }
         }) { (error) in
-            print(error)
+            self.showAlert(title: "Shaku", message: error)
             MBProgressHUD.hide(for: self.view, animated: true)
         }
     }

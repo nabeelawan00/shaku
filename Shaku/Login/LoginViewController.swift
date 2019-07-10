@@ -34,11 +34,8 @@ class LoginViewController: UIViewController {
 //            email and password check.
 //            fildes are not empty so send the data to server.
 //            make the server request and send data to senrver.
-            callAPi()
-            
+            callAPi(email: nil, password: nil)
         }
-        
-
     }
     
     
@@ -75,20 +72,56 @@ extension LoginViewController {
         return true
     }
 //    send data to server. calling API.
-    func callAPi() {
+//    this api is work for both login and sigup.
+    func callAPi(email: String?, password: String?) {
+        
+        self.delegate.showActivityIndicatory(uiView: self.view)
         
         let completeUrl = URL(string: WebServices.skakuBaseURL + APIEnum.auth.rawValue)
-        let paremeters = ["email": emailTF.text!,
-                          "password": passwordTF.text!]
         
-        WebServices.callApiWith(url: completeUrl!, method: .post, parameters: paremeters, withSucces: { (responseObject) in
-            print(responseObject)
-        }) { (error) in
-            self.showAlert(title: "Shaku", message: error)
+        var paremeters = ["":""]
+        
+        if email != nil {
+             paremeters = ["email": email!,
+                           "password": password!]
+        } else {
+             paremeters = ["email": emailTF.text!,
+                           "password": passwordTF.text!]
         }
         
+        
+        
+        WebServices.callApiWith(url: completeUrl!, method: .post, parameters: paremeters, withSucces: { (responseObject) in
+            let login = LoginModel(response: responseObject)
+            if login.status == "true" {
+                self.saveUserDefault(loginData: login)
+                self.movetoNextScreen()
+            } else {
+//                error message.
+                self.showAlert(message: login.message)
+            }
+            self.delegate.hideActivityIndicatory()
+            
+        }) { (error) in
+            self.delegate.hideActivityIndicatory()
+            self.showAlert(title: "Shaku", message: error)
+        }
     }
     
+//    save values to user Defaults.
+    func saveUserDefault(loginData: LoginModel) {
+        UserDefaults.standard.set(loginData.email, forKey: UserDefaultsEnum.email.rawValue)
+        UserDefaults.standard.set(loginData.mobileno, forKey: UserDefaultsEnum.mobileno.rawValue)
+        UserDefaults.standard.set(loginData.name, forKey: UserDefaultsEnum.name.rawValue)
+        UserDefaults.standard.set(loginData.userid, forKey: UserDefaultsEnum.userid.rawValue)
+    }
+    
+    func movetoNextScreen() {
+//        changing root view controller of appliction after login.
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController")
+        UIApplication.shared.keyWindow?.rootViewController = viewController
+    }
     
 }
 

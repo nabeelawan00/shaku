@@ -11,7 +11,6 @@ import CarbonKit
 
 class HomeViewController: UIViewController {
     
-    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -70,8 +69,14 @@ extension HomeViewController : CarbonTabSwipeNavigationDelegate {
             
         } else {
             let screen1 = self.storyboard?.instantiateViewController(withIdentifier: "CategoriesViewController")
-            
             return screen1!
         }
     }
+}
+
+// Custom function extension
+extension HomeViewController {
+    
+//    call api on when screen appears.
+   
 }

@@ -16,9 +16,8 @@ class ItemsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callApi()
+//        callApi()
     }
-    
 
 }
 
@@ -37,10 +36,26 @@ extension ItemsViewController: UITableViewDataSource {
     
 }
 
+// Custom fucntio extension
 extension ItemsViewController {
+    
+//     send data to server.
+    func callingApi() {
+
+        let completeURL = URL(string: WebServices.baseUrl + APIEnum.home.rawValue)!
+        WebServices.callApiWith(url: completeURL, method: .get, parameters: nil, withSucces: { (responseObject) in
+            print(responseObject)
+//            parse items.
+        }) { (error) in
+            self.showAlert(title: "Shaku", message: error)
+        }
+    }
+//
     fileprivate func callApi (){
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        WebServices.URLResponse("http://api.shaku.it/home.php", method: .get, parameters: nil, withSuccess: { [weak self] (data) in
+        let completeURL = WebServices.baseUrl + APIEnum.home.rawValue
+        
+        WebServices.URLResponse(completeURL, method: .get, parameters: nil, withSuccess: { [weak self] (data) in
             
             guard let strongSelf = self else {return}
             let decoder = JSONDecoder()
@@ -58,6 +73,7 @@ extension ItemsViewController {
             }
         }) { (error) in
             print(error)
+            self.showAlert(title: "Shaku", message: error)
             MBProgressHUD.hide(for: self.view, animated: true)
         }
     }

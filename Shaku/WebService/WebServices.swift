@@ -16,11 +16,7 @@ typealias HTTPfailure = (_ errorString: String) -> ()
 typealias successApi = (_ responseObject: Any) -> ()
 
 
-enum APIEnum: String {
-    case home = "home.php"
-    case categories = "categories.php"
-    case auth = "auth.php"
-}
+
 
 class WebServices{
     

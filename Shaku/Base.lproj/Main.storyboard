@@ -21,7 +21,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SWRevealViewController" id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1152,6 +1152,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpBtn:" destination="t95-XB-ujC" eventType="touchUpInside" id="RJn-rU-g6l"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMs-dG-N2W">
                                         <rect key="frame" x="0.0" y="45" width="335" height="40"/>
@@ -1180,6 +1183,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vu7-X6-Rm1"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="rlJ-dk-9S0" id="Trd-nQ-AzN"/>
+                        <outlet property="firstNameTF" destination="HSk-03-yzo" id="5tT-sn-H2Z"/>
+                        <outlet property="lastNameTf" destination="WCH-sR-ERi" id="cM3-AG-Bnp"/>
+                        <outlet property="mobileTF" destination="JKT-TZ-HA2" id="FSX-yF-Yx4"/>
+                        <outlet property="passwordTF" destination="3DW-aS-Lk7" id="Ne0-wh-1lb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5S-Db-foS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

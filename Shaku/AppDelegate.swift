@@ -9,11 +9,13 @@
 import UIKit
 import CoreData
 import GoogleSignIn
+//import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     
     var window: UIWindow?
+    let container : UIView = UIView()
     //    google cling id
     //22270473440-g1kf31pm5ufmkjs6cvu6rpq18puqh7m4.apps.googleusercontent.com
     
@@ -49,10 +51,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
             UserDefaults.standard.set("fullName", forKey: fullName ?? "Login fail")
             UserDefaults.standard.set("email", forKey: email ?? "Login fail")
             
-            
-            
         }
     }
+    
+    //===============================================================================
+    //MARK : Starting loader Running
+    
+    func showActivityIndicatory(uiView: UIView) {
+        
+        container.frame = uiView.frame
+        container.center = uiView.center
+        container.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        let loadingView: UIView = UIView()
+        loadingView.frame = CGRect(x:0,y:0,width:80,height:80)
+        //CGRect(x:0, y:0, w:80, h:80)
+        loadingView.center = uiView.center
+        loadingView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        loadingView.clipsToBounds = true
+        loadingView.layer.cornerRadius = 10
+        
+        let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+        actInd.frame = CGRect(x:0,y:0,width:40,height:40)
+        actInd.style =
+            UIActivityIndicatorView.Style.whiteLarge
+        actInd.center = CGPoint(x:loadingView.frame.width/2,y:loadingView.frame.height/2)
+        loadingView.addSubview(actInd)
+        container.addSubview(loadingView)
+        uiView.addSubview(container)
+        actInd.startAnimating()
+    }
+    func hideActivityIndicatory() {
+        container.removeFromSuperview()
+    }
+    //===============================================================================
+    //MARK : Ending loader Running
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
