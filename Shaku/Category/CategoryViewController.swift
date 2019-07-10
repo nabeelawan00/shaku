@@ -18,6 +18,11 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         callApi()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        callApi()
+    }
 }
 
 extension CategoryViewController: UITableViewDataSource {
@@ -39,7 +44,7 @@ extension CategoryViewController: UITableViewDataSource {
 extension CategoryViewController {
     fileprivate func callApi (){
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        let completeURL = WebServices.baseUrl + APIEnum.categories.rawValue
+        let completeURL = WebServices.skakuBaseURL + APIEnum.categories.rawValue
         WebServices.URLResponse(completeURL, method: .get, parameters: nil, withSuccess: { [weak self] (data) in
             
             guard let strongSelf = self else {return}
