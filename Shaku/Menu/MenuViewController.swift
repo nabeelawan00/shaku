@@ -11,13 +11,16 @@ import UIKit
 class MenuViewController: UIViewController {
     
     @IBOutlet var nameLoginLbl: UILabel!
+    @IBOutlet weak var emailLbl: UILabel!
+    
+    
     var menuNameArr: Array = [String]()
     var iconImage:Array = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuNameArr = ["HOME", "COUPONS", "STORES", "ALL PRODUCT", "PROFILE", "SHARE"]
+        menuNameArr = ["HOME", "COUPONS", "STORES", "ALL PRODUCT", "PROFILE", "SHARE", "LOGOUT"]
         iconImage = [UIImage(named: "Home")!,UIImage(named: "bag")!, UIImage(named: "shop")!, UIImage(named: "myaccount")!, UIImage(named: "saveditems")!, UIImage(named: "Help")!, UIImage(named: "setting")!]
         
        
@@ -34,26 +37,6 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func showUserName() {
-        
-//        if isUserDefaultsEmpty()
-//        {
-//            nameLoginLbl.isHidden = true
-//        }
-//        else {
-//            
-//            nameLoginLbl.isHidden = false
-//            nameLoginLbl.text = UserDefaults.standard.string(forKey: userDefaultProfile.first_name.rawValue) ?? ""
-//        }
-
-        
-    }
-        
-        
-    
-    
-    
-    
     
     /*
      // MARK: - Navigation
@@ -65,6 +48,18 @@ class MenuViewController: UIViewController {
      }
      */
     
+    func showUserName() {
+        
+        if CustomUserDefaults.isUserDefaultEmpty() {
+            nameLoginLbl.isHidden = true
+        } else {
+            nameLoginLbl.isHidden = false
+            nameLoginLbl.text = UserDefaults.standard.string(forKey: UserDefaultsEnum.name.rawValue) ?? ""
+            emailLbl.text = UserDefaults.standard.string(forKey: UserDefaultsEnum.email.rawValue) ?? ""
+        }
+    }
+    
+    
 }
 extension MenuViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +69,7 @@ extension MenuViewController : UITableViewDataSource {
 //        }
         
         
-              return 6
+              return menuNameArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -129,10 +124,13 @@ extension MenuViewController : UITableViewDelegate {
             
              present(contctVC!, animated: true, completion: nil)
         }
-        else {
-
-                    print("Complete")
-}
+        else if menuNameArr[indexPath.row] == "LOGOUT" {
+            print("Logout")
+//            clear the userdefaults.
+//            move to login screen.
+        } else {
+            print("end else is running")
+        }
 
              tableView.deselectRow(at: indexPath, animated: true)
 
@@ -140,20 +138,6 @@ extension MenuViewController : UITableViewDelegate {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

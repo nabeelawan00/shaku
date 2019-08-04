@@ -19,10 +19,25 @@ class CouponViewController: UIViewController {
         callApi()
     }
     
-    @IBAction func dropDownBtn(_ sender: Any) {
-
+    
+    @IBAction func shareBtnAction(_ sender: UIButton) {
+        let shareVC = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as! ShareViewController
+        displayContentController(content: shareVC)
+        
     }
     
+    @IBAction func printBtnAction(_ sender: UIButton) {
+        let printVC = storyboard?.instantiateViewController(withIdentifier: "PrintViewController") as! PrintViewController
+        printVC.couponItem = coupon?[sender.tag]
+        displayContentController(content: printVC)
+        
+    }
+    
+    func displayContentController(content: UIViewController) {
+        addChild(content)
+        self.view.addSubview(content.view)
+        content.didMove(toParent: self)
+    }
 }
 
 

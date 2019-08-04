@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047AD91522F6F6E3007DE640 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AD91422F6F6E3007DE640 /* ShareViewController.swift */; };
+		047AD91822F70021007DE640 /* PrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AD91722F70021007DE640 /* PrintViewController.swift */; };
+		047AD91B22F712C0007DE640 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AD91A22F712C0007DE640 /* ProfileViewController.swift */; };
+		047AD91D22F71852007DE640 /* CustomUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AD91C22F71852007DE640 /* CustomUserDefaults.swift */; };
 		0F66CC61221872C600404F2E /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC5F221872C600404F2E /* WebServices.swift */; };
 		0F66CC632218748600404F2E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC622218748600404F2E /* Category.swift */; };
 		0F66CC65221875AA00404F2E /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC64221875AA00404F2E /* Coupon.swift */; };
@@ -64,6 +68,10 @@
 
 /* Begin PBXFileReference section */
 		0030A6B5666AC6087B5CCA7C /* Pods-ShakuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakuUITests/Pods-ShakuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		047AD91422F6F6E3007DE640 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		047AD91722F70021007DE640 /* PrintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintViewController.swift; sourceTree = "<group>"; };
+		047AD91A22F712C0007DE640 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		047AD91C22F71852007DE640 /* CustomUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUserDefaults.swift; sourceTree = "<group>"; };
 		0F66CC5F221872C600404F2E /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		0F66CC622218748600404F2E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0F66CC64221875AA00404F2E /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
@@ -143,6 +151,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047AD91322F6F6CA007DE640 /* ShareViewControlleer */ = {
+			isa = PBXGroup;
+			children = (
+				047AD91422F6F6E3007DE640 /* ShareViewController.swift */,
+			);
+			path = ShareViewControlleer;
+			sourceTree = "<group>";
+		};
+		047AD91622F70010007DE640 /* PrintViewController */ = {
+			isa = PBXGroup;
+			children = (
+				047AD91722F70021007DE640 /* PrintViewController.swift */,
+			);
+			path = PrintViewController;
+			sourceTree = "<group>";
+		};
+		047AD91922F712AE007DE640 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				047AD91A22F712C0007DE640 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		0F66CC5D2218715900404F2E /* WebService */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +211,7 @@
 		870C53B2221A02210079ECF5 /* userDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				047AD91C22F71852007DE640 /* CustomUserDefaults.swift */,
 			);
 			path = userDefaults;
 			sourceTree = "<group>";
@@ -208,6 +241,7 @@
 		873C6FB2220CAE810015A1B5 /* Shaku */ = {
 			isa = PBXGroup;
 			children = (
+				047AD91922F712AE007DE640 /* ProfileViewController */,
 				87EF6D9422CC98EE00D6968B /* Extension */,
 				870C53B2221A02210079ECF5 /* userDefaults */,
 				870C53AB2219FB240079ECF5 /* Login */,
@@ -216,6 +250,8 @@
 				876F584322148D4300A6D830 /* Menu */,
 				87F504D0220E1AD500C08A56 /* Store */,
 				87F504CD220E0FD700C08A56 /* Coupon */,
+				047AD91622F70010007DE640 /* PrintViewController */,
+				047AD91322F6F6CA007DE640 /* ShareViewControlleer */,
 				87F504CA220E0CA400C08A56 /* Category */,
 				873C6FEC220CB7EE0015A1B5 /* ItemsView */,
 				873C6FE9220CB27E0015A1B5 /* HomeVIew */,
@@ -604,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047AD91D22F71852007DE640 /* CustomUserDefaults.swift in Sources */,
 				873C6FEB220CB2A30015A1B5 /* HomeViewController.swift in Sources */,
 				876F584722148D4400A6D830 /* MenuViewController.swift in Sources */,
 				873C6FEE220CB7FF0015A1B5 /* ItemsViewController.swift in Sources */,
@@ -616,8 +653,11 @@
 				0F66CC692218857C00404F2E /* RootStore.swift in Sources */,
 				0F66CC6D22188E0D00404F2E /* CouponsHome.swift in Sources */,
 				0F66CC6B22188BBB00404F2E /* CatogoryCell.swift in Sources */,
+				047AD91B22F712C0007DE640 /* ProfileViewController.swift in Sources */,
 				873C6FB6220CAE810015A1B5 /* ViewController.swift in Sources */,
 				876F584622148D4400A6D830 /* MenuTableViewCell.swift in Sources */,
+				047AD91522F6F6E3007DE640 /* ShareViewController.swift in Sources */,
+				047AD91822F70021007DE640 /* PrintViewController.swift in Sources */,
 				7D0335542215F13E0016D2F4 /* ProductTableViewCell.swift in Sources */,
 				0F66CC6F22188F8000404F2E /* ItemCell.swift in Sources */,
 				879A095522D5FAC9002997D6 /* Enums.swift in Sources */,

@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         // Override point for customization after application launch.
         GIDSignIn.sharedInstance()?.clientID = "22270473440-g1kf31pm5ufmkjs6cvu6rpq18puqh7m4.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-        
+        selectRootController()
         return true
     }
     
@@ -31,6 +31,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         return GIDSignIn.sharedInstance().handle(url as URL?,
                                                  sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
                                                  annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    }
+    
+    /// Author:- Qazi Ammar Arshad
+    func selectRootController() {
+        
+        if CustomUserDefaults.isUserDefaultEmpty() {
+//            move to login screen.
+            let LoginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginNavigationVC") as! UINavigationController
+            self.window?.rootViewController = LoginVC
+            
+        } else {
+//            move to Home scree.
+            let SWRevealVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+            self.window?.rootViewController = SWRevealVC
+        }
+        
+        
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,

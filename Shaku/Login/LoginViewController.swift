@@ -89,7 +89,7 @@ extension LoginViewController {
         WebServices.callApiWith(url: completeUrl!, method: .post, parameters: paremeters, withSucces: { (responseObject) in
             let login = LoginModel(response: responseObject)
             if login.status == "true" {
-                self.saveUserDefault(loginData: login)
+                CustomUserDefaults.saveUserDefault(with: login)
                 self.movetoNextScreen()
             } else {
 //                error message.
@@ -101,14 +101,6 @@ extension LoginViewController {
             self.delegate.hideActivityIndicatory()
             self.showAlert(title: "Shaku", message: error)
         }
-    }
-    
-//    save values to user Defaults.
-    func saveUserDefault(loginData: LoginModel) {
-        UserDefaults.standard.set(loginData.email, forKey: UserDefaultsEnum.email.rawValue)
-        UserDefaults.standard.set(loginData.mobileno, forKey: UserDefaultsEnum.mobileno.rawValue)
-        UserDefaults.standard.set(loginData.name, forKey: UserDefaultsEnum.name.rawValue)
-        UserDefaults.standard.set(loginData.userid, forKey: UserDefaultsEnum.userid.rawValue)
     }
     
     func movetoNextScreen() {
