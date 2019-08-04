@@ -10,6 +10,7 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak fileprivate var mainImage: UIImageView!
     @IBOutlet weak fileprivate var expirdate: UILabel!
     @IBOutlet weak fileprivate var mangnitLable: UILabel!
@@ -30,8 +31,13 @@ extension ItemCell {
     
     func configItemCell(item: Coupon , indexPath: IndexPath){
         expirdate.text = item.expiration
-        mangnitLable.text = item.title
-        let url = item.image
-        mainImage.sd_setImage(with: URL(string: url ?? ""), placeholderImage:UIImage(named: "drawer_backimage"), options: .retryFailed, completed: nil)
+        titleLbl.text = item.title
+        mangnitLable.text = item.descriptionField
+        let url = WebServices.imageBaseURL + item.image!
+        if let url = item.image {
+            print("Image URl of Home APi is nill")
+        }
+       let completeURL = WebServices.imageBaseURL + url
+        mainImage.sd_setImage(with: URL(string: completeURL), placeholderImage:UIImage(named: "drawer_backimage"), options: .retryFailed, completed: nil)
     }
 }

@@ -22,6 +22,7 @@ class WebServices{
     
     static let baseUrl = "http://www.mocky.io/v2/59bbc4640f00001102ff872f"
     static let skakuBaseURL = "https://api.shaku.it/"
+    static let imageBaseURL = "https://shaku.it/"
     
     
     class func URLResponse(_ url:String, method: HTTPMethod ,parameters: [String: Any]?, withSuccess success: @escaping apiSuccess, withapiFiluer failure: @escaping apiFailure) {

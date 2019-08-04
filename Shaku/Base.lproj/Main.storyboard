@@ -166,6 +166,7 @@
                                             <outlet property="expirdate" destination="Wch-lZ-AoX" id="X4x-kA-kfa"/>
                                             <outlet property="mainImage" destination="4cz-FB-fJo" id="RAH-uB-hRA"/>
                                             <outlet property="mangnitLable" destination="7yL-kl-dvk" id="dRe-rQ-47T"/>
+                                            <outlet property="titleLbl" destination="8SM-66-dVl" id="XZZ-qU-UFD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
