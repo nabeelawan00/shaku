@@ -22,6 +22,9 @@ class CouponViewController: UIViewController {
     
     @IBAction func shareBtnAction(_ sender: UIButton) {
         let shareVC = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as! ShareViewController
+        if coupon != nil {
+            shareVC.couponId = coupon![sender.tag].id!
+        }
         displayContentController(content: shareVC)
         
     }
@@ -66,7 +69,7 @@ extension CouponViewController {
             do{
                 MBProgressHUD.hide(for: strongSelf.view , animated: true)
                 let response = try decoder.decode(RootCoupon.self, from: data)
-                print(response)
+//                print(response)
                 if let strongSelf = self {
                     strongSelf.coupon = response.coupons
                     strongSelf.tableView.reloadData()

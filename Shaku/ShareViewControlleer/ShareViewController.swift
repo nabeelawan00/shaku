@@ -11,6 +11,7 @@ import UIKit
 class ShareViewController: UIViewController {
 
     @IBOutlet var parentView: UIView!
+    var couponId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,25 @@ class ShareViewController: UIViewController {
         self.willMove(toParent: nil)
         self.view.removeFromSuperview()
         self.removeFromParent()
+    }
+    @IBAction func instagramBtn(_ sender: UIButton) {
+        
+        let instagramHooks = "https://shaku.it/sharer.php?s=instagram&u=" + CustomUserDefaults.getUderId() + "&c=" + couponId
+        
+        let instagramURL = NSURL(string: "instagram://app")
+        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
+            //Code
+            UIApplication.shared.open(URL(string: instagramHooks)!)
+        } else {
+            //Showing message "Please install the Instagram application"
+            UIApplication.shared.open(URL(string: "http://instagram.com/")!)
+        }
+        
+    }
+    @IBAction func whatsAppBtn(_ sender: UIButton) {
+        
+    }
+    @IBAction func faceboobBtn(_ sender: UIButton) {
     }
     
     
