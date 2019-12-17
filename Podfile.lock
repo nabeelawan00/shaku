@@ -19,6 +19,7 @@ PODS:
   - ImageSlideshow (1.7.0):
     - ImageSlideshow/Core (= 1.7.0)
   - ImageSlideshow/Core (1.7.0)
+  - IQKeyboardManager (6.5.3)
   - IQKeyboardManagerSwift (6.2.0)
   - MBProgressHUD (1.1.0)
   - SDWebImage (4.4.5):
@@ -32,13 +33,14 @@ DEPENDENCIES:
   - CarbonKit
   - GoogleSignIn
   - ImageSlideshow (~> 1.6)
+  - IQKeyboardManager
   - IQKeyboardManagerSwift
   - MBProgressHUD
   - SDWebImage (~> 4.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - AlamofireImage
     - CarbonKit
@@ -46,6 +48,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - ImageSlideshow
+    - IQKeyboardManager
     - IQKeyboardManagerSwift
     - MBProgressHUD
     - SDWebImage
@@ -59,11 +62,12 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
+  IQKeyboardManager: c2f901164d56807a35788483584d09fa69192e8e
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 064eeb27dbf8329dbff15c8c096fd3b0aa6ce921
+PODFILE CHECKSUM: f259bc8139e7d93a8b2386de440834938c242de2
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

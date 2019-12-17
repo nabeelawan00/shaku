@@ -15,9 +15,6 @@ typealias HTTPfailure = (_ errorString: String) -> ()
 //Qazi Ammar Api typeAlies.
 typealias successApi = (_ responseObject: Any) -> ()
 
-
-
-
 class WebServices{
     
     static let baseUrl = "http://www.mocky.io/v2/59bbc4640f00001102ff872f"

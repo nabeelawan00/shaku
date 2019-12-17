@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import GoogleSignIn
-//import IQKeyboardManagerSwift
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
         GIDSignIn.sharedInstance()?.clientID = "22270473440-g1kf31pm5ufmkjs6cvu6rpq18puqh7m4.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         selectRootController()
@@ -56,18 +57,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
             print("\(error.localizedDescription)")
         } else {
             // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
+            let userID = user.userID                  // For client-side use only!
             let idToken = user.authentication.idToken // Safe to send to the server
             let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
+            _ = user.profile.givenName
+            _ = user.profile.familyName
             let email = user.profile.email
             
             // ...
 //            save data to userDefaults
-            UserDefaults.standard.set("fullName", forKey: fullName ?? "Login fail")
-            UserDefaults.standard.set("email", forKey: email ?? "Login fail")
+            UserDefaults.standard.set(UserDefaultsEnum.userid.rawValue, forKey: userID ?? "Login fail")
+            UserDefaults.standard.set(UserDefaultsEnum.name.rawValue, forKey: fullName ?? "Login fail")
+            UserDefaults.standard.set(UserDefaultsEnum.email.rawValue, forKey: email ?? "Login fail")
             
+            selectRootController()
         }
     }
     

@@ -41,11 +41,11 @@ extension ItemsViewController {
     
     fileprivate func callApi (){
         
-        MBProgressHUD.showAdded(to: self.view, animated: true)
+//        MBProgressHUD.showAdded(to: self.view, animated: true)
         let completeUrl =  WebServices.skakuBaseURL + APIEnum.home.rawValue
         
         WebServices.URLResponse(completeUrl, method: .post, parameters: nil, withSuccess: { [weak self] (data) in
-            MBProgressHUD.hide(for: self!.view, animated: true)
+//            MBProgressHUD.hide(for: self!.view, animated: true)
             let decoder = JSONDecoder()
             do{
                 let response = try decoder.decode(RootCoupon.self, from: data)
@@ -60,7 +60,7 @@ extension ItemsViewController {
                 
             }
         }) { (error) in
-            MBProgressHUD.hide(for: self.view, animated: true)
+//            MBProgressHUD.hide(for: self.view, animated: true)
             print(error)
             self.showAlert(message: error)
         }

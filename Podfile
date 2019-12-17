@@ -15,6 +15,7 @@ target 'Shaku' do
   pod 'CarbonKit'
   pod 'MBProgressHUD'
   pod 'GoogleSignIn'
+  pod 'IQKeyboardManager'
   
   target 'ShakuTests' do
     inherit! :search_paths

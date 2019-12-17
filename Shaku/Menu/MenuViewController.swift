@@ -16,6 +16,7 @@ class MenuViewController: UIViewController {
     
     var menuNameArr: Array = [String]()
     var iconImage:Array = [UIImage]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,16 +128,15 @@ extension MenuViewController : UITableViewDelegate {
         else if menuNameArr[indexPath.row] == "LOGOUT" {
             print("Logout")
 //            clear the userdefaults.
+            CustomUserDefaults.clearAllUserDefaults()
 //            move to login screen.
+            appDelegate?.selectRootController()
+
         } else {
             print("end else is running")
         }
-
              tableView.deselectRow(at: indexPath, animated: true)
-
-
     }
-
 }
 
 

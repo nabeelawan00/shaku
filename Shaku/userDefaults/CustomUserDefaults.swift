@@ -35,5 +35,13 @@ class CustomUserDefaults {
         return userId
     }
     
+    class func clearAllUserDefaults() {
+        UserDefaults.standard.removeObject(forKey: UserDefaultsEnum.userid.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsEnum.email.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsEnum.name.rawValue)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsEnum.mobileno.rawValue)
+        UserDefaults.standard.synchronize()
+    }
+    
     
 }

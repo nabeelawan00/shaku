@@ -12,6 +12,7 @@ class ShareViewController: UIViewController {
 
     @IBOutlet var parentView: UIView!
     var couponId = ""
+    var testVariable = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
