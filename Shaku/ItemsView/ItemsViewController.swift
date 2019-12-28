@@ -31,18 +31,50 @@ extension ItemsViewController: UITableViewDataSource {
         if let item = homeModel?.coupons?[indexPath.item]{
             cell.configItemCell(item: item, indexPath: indexPath)
         }
+        
+        
+        cell.callBack = {[weak self] in
+            guard let self = self else {return}
+            guard let coupenId = self.homeModel?.coupons?[indexPath.item].id else {print("no coupen id");return}
+            self.openSahreVc(coupenID: coupenId)
+        }
+        
         return cell
     }
     
+    
+    private func openSahreVc(coupenID  : String){
+        let shareVC = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as! ShareViewController
+        
+        if homeModel?.coupons != nil {
+            shareVC.couponId = coupenID
+        }
+        displayContentController(content: shareVC)
+    }
+    func displayContentController(content: UIViewController) {
+        addChild(content)
+        self.view.addSubview(content.view)
+        content.didMove(toParent: self)
+    }
 }
-
+//MARK: DIDSELECTCALL
+extension ItemsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard  let urlStrring =  homeModel?.coupons?[indexPath.item].link else {print("No link found");return}
+        if let url = URL(string: urlStrring) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+}
 // Custom fucntio extension
 extension ItemsViewController {
     
     fileprivate func callApi (){
         
 //        MBProgressHUD.showAdded(to: self.view, animated: true)
-        let completeUrl =  WebServices.skakuBaseURL + APIEnum.home.rawValue
+        let completeUrl =  WebServices.skakuBaseURL + APIEnum.coupons.rawValue
         
         WebServices.URLResponse(completeUrl, method: .post, parameters: nil, withSuccess: { [weak self] (data) in
 //            MBProgressHUD.hide(for: self!.view, animated: true)

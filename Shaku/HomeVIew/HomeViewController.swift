@@ -22,12 +22,14 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         carbonKit()
+        
         swReavelController()
         
     }
     
     /// - Author: Qazi Ammar Arshad
     func carbonKit() {
+        
         let items = [" HOME ",  " CATEGORIES  "]
         let carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items, delegate: self)
         carbonTabSwipeNavigation.insert(intoRootViewController: self)
@@ -48,19 +50,8 @@ class HomeViewController: UIViewController {
         self.revealViewController().rearViewRevealDisplacement = 0
         self.revealViewController()?.frontViewController.viewWillDisappear(true)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+   
 }
-
 
 extension HomeViewController : CarbonTabSwipeNavigationDelegate {
     
@@ -81,6 +72,5 @@ extension HomeViewController : CarbonTabSwipeNavigationDelegate {
 extension HomeViewController {
     
     //    call api on when screen appears.
-    
     
 }

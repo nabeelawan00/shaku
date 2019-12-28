@@ -24,4 +24,6 @@ enum APIEnum: String {
     case auth = "auth.php"
     case signup = "signup.php"
     case update = "profile_update.php"
+    case product = "products.php"
+    case coupons = "coupons.php"
 }

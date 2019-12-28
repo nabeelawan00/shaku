@@ -11,6 +11,7 @@
 		047AD91822F70021007DE640 /* PrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AD91722F70021007DE640 /* PrintViewController.swift */; };
 		047AD91B22F712C0007DE640 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AD91A22F712C0007DE640 /* ProfileViewController.swift */; };
 		047AD91D22F71852007DE640 /* CustomUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AD91C22F71852007DE640 /* CustomUserDefaults.swift */; };
+		04C7E7DC23AA822400978323 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7E7DB23AA822400978323 /* Product.swift */; };
 		0F66CC61221872C600404F2E /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC5F221872C600404F2E /* WebServices.swift */; };
 		0F66CC632218748600404F2E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC622218748600404F2E /* Category.swift */; };
 		0F66CC65221875AA00404F2E /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F66CC64221875AA00404F2E /* Coupon.swift */; };
@@ -72,6 +73,7 @@
 		047AD91722F70021007DE640 /* PrintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintViewController.swift; sourceTree = "<group>"; };
 		047AD91A22F712C0007DE640 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		047AD91C22F71852007DE640 /* CustomUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUserDefaults.swift; sourceTree = "<group>"; };
+		04C7E7DB23AA822400978323 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0F66CC5F221872C600404F2E /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		0F66CC622218748600404F2E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0F66CC64221875AA00404F2E /* Coupon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				0F66CC64221875AA00404F2E /* Coupon.swift */,
 				0F66CC682218857C00404F2E /* RootStore.swift */,
 				0F66CC6C22188E0D00404F2E /* CouponsHome.swift */,
+				04C7E7DB23AA822400978323 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				7D0335522215EA080016D2F4 /* StoreCollectionViewCell.swift in Sources */,
 				7D832257221494EA0070E035 /* ProductViewController.swift in Sources */,
 				87F504CF220E0FE800C08A56 /* CouponViewController.swift in Sources */,
+				04C7E7DC23AA822400978323 /* Product.swift in Sources */,
 				873C6FBC220CAE810015A1B5 /* Shaku.xcdatamodeld in Sources */,
 				0F66CC692218857C00404F2E /* RootStore.swift in Sources */,
 				0F66CC6D22188E0D00404F2E /* CouponsHome.swift in Sources */,

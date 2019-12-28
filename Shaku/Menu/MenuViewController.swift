@@ -111,7 +111,7 @@ extension MenuViewController : UITableViewDelegate {
                 homeViewController.pushViewController(bagVC!, animated: true)
         }
         else if menuNameArr[indexPath.row] == "ALL PRODUCT" {
-            let profileVC = storyboard?.instantiateViewController(withIdentifier: "AllProductViewController")
+            let profileVC = storyboard?.instantiateViewController(withIdentifier: "ProductViewController")
             homeViewController.pushViewController(profileVC!,animated: true)
 
         }

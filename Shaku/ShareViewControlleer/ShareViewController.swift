@@ -22,7 +22,6 @@ class ShareViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -49,6 +48,7 @@ class ShareViewController: UIViewController {
         self.view.removeFromSuperview()
         self.removeFromParent()
     }
+    
     @IBAction func instagramBtn(_ sender: UIButton) {
         
         let instagramHooks = "https://shaku.it/sharer.php?s=instagram&u=" + CustomUserDefaults.getUderId() + "&c=" + couponId
@@ -57,18 +57,48 @@ class ShareViewController: UIViewController {
         if UIApplication.shared.canOpenURL(instagramURL! as URL) {
             //Code
             UIApplication.shared.open(URL(string: instagramHooks)!)
+            
         } else {
             //Showing message "Please install the Instagram application"
             UIApplication.shared.open(URL(string: "http://instagram.com/")!)
         }
         
     }
+    
     @IBAction func whatsAppBtn(_ sender: UIButton) {
         
+        // https://shaku.it/sharer.php?s=whatsapp&u=
+        
+        let whatsappHooks = "https://shaku.it/sharer.php?s=whatsapp&u=" + CustomUserDefaults.getUderId() + "&c=" + couponId
+        
+        if let urlString = whatsappHooks.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
+            if let whatsappURL = URL(string: urlString) {
+                if UIApplication.shared.canOpenURL(whatsappURL) {
+                    UIApplication.shared.openURL(whatsappURL)
+                } else {
+                    print("Install Whatsapp")
+                }
+            }
+        }
+
     }
+    
     @IBAction func faceboobBtn(_ sender: UIButton) {
+        
+//        https://shaku.it/sharer.php?s=facebook&u=
+        
+        let facebookHooks = "https://shaku.it/sharer.php?s=facebook&u=" + CustomUserDefaults.getUderId() + "&c=" + couponId
+        
+        let facebookURL = NSURL(string: "facebook://app")
+        if UIApplication.shared.canOpenURL(facebookURL! as URL) {
+            //Code
+            UIApplication.shared.open(URL(string: facebookHooks)!)
+            
+        } else {
+            //Showing message "Please install the Instagram application"
+            UIApplication.shared.open(URL(string: "http://facebook.com/")!)
+        }
+        
     }
-    
-    
     
 }

@@ -15,18 +15,28 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak fileprivate var expirdate: UILabel!
     @IBOutlet weak fileprivate var mangnitLable: UILabel!
     
+    var callBack : (()->())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
+        
     }
 
+    @IBAction func shareBtnAction(_ sender: UIButton) {
+        if let callBack = callBack {callBack()}
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
     }
 
 }
+
 extension ItemCell {
     
     func configItemCell(item: Coupon , indexPath: IndexPath){
@@ -35,5 +45,6 @@ extension ItemCell {
         mangnitLable.text = item.descriptionField
         let url = WebServices.imageBaseURL + item.image!
         mainImage.sd_setImage(with: URL(string: url), placeholderImage:UIImage(named: "drawer_backimage"), options: .retryFailed, completed: nil)
+        
     }
 }

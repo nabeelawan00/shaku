@@ -16,6 +16,8 @@ class CouponViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         callApi()
     }
     
@@ -54,11 +56,23 @@ extension CouponViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "couponCell") as! CouponCell
         if let item = coupon?[indexPath.item] {
-           cell.configCouponCell(item: item, indexPath: indexPath)
+            cell.configCouponCell(item: item, indexPath: indexPath)
         }
         return cell
     }
 }
+//MARK: DIDSELECTCALL
+extension CouponViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard  let urlStrring =  coupon?[indexPath.item].link else {print("No link found");return}
+        if let url = URL(string: urlStrring) {
+            UIApplication.shared.open(url)
+        }
+    }
+}
+
+
 extension CouponViewController {
     fileprivate func callApi (){
         MBProgressHUD.showAdded(to: self.view, animated: true)
@@ -69,14 +83,14 @@ extension CouponViewController {
             do{
                 MBProgressHUD.hide(for: strongSelf.view , animated: true)
                 let response = try decoder.decode(RootCoupon.self, from: data)
-//                print(response)
+                //                print(response)
                 if let strongSelf = self {
                     strongSelf.coupon = response.coupons
                     strongSelf.tableView.reloadData()
                 }
             }catch let error{
                 print(error.localizedDescription)
-                 MBProgressHUD.hide(for: strongSelf.view, animated: true)
+                MBProgressHUD.hide(for: strongSelf.view, animated: true)
             }
         }) { (error) in
             print(error)
