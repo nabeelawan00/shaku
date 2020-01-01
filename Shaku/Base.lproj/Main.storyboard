@@ -581,12 +581,12 @@
                                                     <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.10.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOm-4e-wXI">
-                                                    <rect key="frame" x="-120" y="63" width="0.0" height="17"/>
+                                                    <rect key="frame" x="-16" y="63" width="0.0" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-Vp-LVW">
-                                                    <rect key="frame" x="-318" y="117.5" width="95.5" height="14.5"/>
+                                                    <rect key="frame" x="-318" y="117.5" width="84.5" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="900.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbL-gi-o1r">
                                                             <rect key="frame" x="0.0" y="0.0" width="41" height="14.5"/>
@@ -598,8 +598,8 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agf-Nb-kEx">
-                                                            <rect key="frame" x="87.5" y="0.0" width="8" height="14.5"/>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agf-Nb-kEx">
+                                                            <rect key="frame" x="84.5" y="0.0" width="0.0" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </label>
@@ -615,7 +615,7 @@
                                                 <constraint firstItem="HTE-Vp-LVW" firstAttribute="centerY" secondItem="3vJ-e1-esA" secondAttribute="centerY" id="6vJ-Sb-5Gf"/>
                                                 <constraint firstAttribute="trailing" secondItem="3vJ-e1-esA" secondAttribute="trailing" constant="318" id="7Nd-DC-yrN"/>
                                                 <constraint firstItem="pOm-4e-wXI" firstAttribute="baseline" secondItem="3G7-4P-x6r" secondAttribute="baseline" id="8nT-Dr-NRg"/>
-                                                <constraint firstAttribute="trailing" secondItem="pOm-4e-wXI" secondAttribute="trailing" constant="120" id="9X6-1O-pl8"/>
+                                                <constraint firstAttribute="trailing" secondItem="pOm-4e-wXI" secondAttribute="trailing" constant="16" id="9X6-1O-pl8"/>
                                                 <constraint firstItem="z8K-x7-5UY" firstAttribute="leading" secondItem="BqV-BO-pwx" secondAttribute="leadingMargin" constant="-7" id="A7C-6J-X4Q"/>
                                                 <constraint firstItem="pOm-4e-wXI" firstAttribute="leading" secondItem="3G7-4P-x6r" secondAttribute="trailing" constant="12" id="CIg-ui-fYM"/>
                                                 <constraint firstItem="HTE-Vp-LVW" firstAttribute="leading" secondItem="3vJ-e1-esA" secondAttribute="leading" id="EiA-Hj-Aji"/>
@@ -623,7 +623,7 @@
                                                 <constraint firstItem="DAf-Pu-v2n" firstAttribute="leading" secondItem="BqV-BO-pwx" secondAttribute="leading" constant="108" id="Kxg-V8-asp"/>
                                                 <constraint firstItem="DAf-Pu-v2n" firstAttribute="leading" secondItem="z8K-x7-5UY" secondAttribute="trailing" constant="10" id="LzZ-79-cEH"/>
                                                 <constraint firstItem="DAf-Pu-v2n" firstAttribute="top" secondItem="0cu-VH-n6w" secondAttribute="bottom" constant="8" symbolic="YES" id="NNl-uV-aV3"/>
-                                                <constraint firstItem="pOm-4e-wXI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3G7-4P-x6r" secondAttribute="trailing" symbolic="YES" id="UzM-hG-J2b"/>
+                                                <constraint firstItem="pOm-4e-wXI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3G7-4P-x6r" secondAttribute="trailing" constant="8" symbolic="YES" id="UzM-hG-J2b"/>
                                                 <constraint firstItem="HTE-Vp-LVW" firstAttribute="leading" secondItem="BqV-BO-pwx" secondAttribute="leadingMargin" id="YwW-Eq-rSc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="HTE-Vp-LVW" secondAttribute="bottom" constant="5" id="bVe-6W-DJE"/>
                                                 <constraint firstItem="3vJ-e1-esA" firstAttribute="top" secondItem="mti-aj-msA" secondAttribute="bottom" constant="12" id="dIx-gT-gep"/>
@@ -659,7 +659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlE-XE-aoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3552.8000000000002" y="1134.7826086956522"/>
+            <point key="canvasLocation" x="3559" y="1135"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="TVE-CC-erD">

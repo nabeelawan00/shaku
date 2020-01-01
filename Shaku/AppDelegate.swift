@@ -12,7 +12,7 @@ import GoogleSignIn
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
     let container : UIView = UIView()
@@ -22,16 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
-        GIDSignIn.sharedInstance()?.clientID = "22270473440-g1kf31pm5ufmkjs6cvu6rpq18puqh7m4.apps.googleusercontent.com"
+        
+        GIDSignIn.sharedInstance().clientID = "22270473440-g1kf31pm5ufmkjs6cvu6rpq18puqh7m4.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         selectRootController()
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url as URL?,
-                                                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                                                 annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        return (GIDSignIn.sharedInstance()?.handle(url))!
     }
     
     /// Author:- Qazi Ammar Arshad

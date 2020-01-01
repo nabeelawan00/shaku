@@ -10,12 +10,13 @@ target 'Shaku' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage', '~> 4.0'
   pod 'ImageSlideshow', '~> 1.6'
-  pod 'IQKeyboardManagerSwift'
   pod 'AlamofireImage', '~> 3.4'
+  pod 'IQKeyboardManagerSwift', '6.5.0'
   pod 'CarbonKit'
   pod 'MBProgressHUD'
   pod 'GoogleSignIn'
   pod 'IQKeyboardManager'
+  pod 'FacebookShare'
   
   target 'ShakuTests' do
     inherit! :search_paths

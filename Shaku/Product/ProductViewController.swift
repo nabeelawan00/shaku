@@ -45,12 +45,16 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
         ProductTableViewCell
         
         let product = product_api_response?.products?[indexPath.row]
-        cell.productName.text = product?.categoryname
-        cell.NewPrice.text = product?.price
+        cell.productName.text = product?.title
+        cell.NewPrice.text = (product?.price)! + " " + (product?.currency)!
+        cell.oldAmount.text = product?.old_price
+        cell.productExpiry.text = product?.expiration
+        cell.productDescription.text = product?.description
         let image_url = URL(string: WebServices.imageBaseURL + (product?.image ?? ""))
         cell.productImageView?.sd_setImage(with: image_url, completed: nil)
         
         return cell
+        
     }
     
 }

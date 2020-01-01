@@ -18,7 +18,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+//        GIDSignIn.sharedInstance()?.uiDelegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -110,8 +111,8 @@ extension LoginViewController {
     
 }
 
-//google extension
-extension LoginViewController: GIDSignInUIDelegate {
-    // Present a view that prompts the user to sign in with Google
-    
-}
+////google extension
+//extension LoginViewController: GIDSignInUIDelegate {
+//    // Present a view that prompts the user to sign in with Google
+//    
+//}
