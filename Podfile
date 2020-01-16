@@ -11,7 +11,7 @@ target 'Shaku' do
   pod 'SDWebImage', '~> 4.0'
   pod 'ImageSlideshow', '~> 1.6'
   pod 'AlamofireImage', '~> 3.4'
-  pod 'IQKeyboardManagerSwift', '6.5.0'
+  pod 'IQKeyboardManagerSwift'
   pod 'CarbonKit'
   pod 'MBProgressHUD'
   pod 'GoogleSignIn'

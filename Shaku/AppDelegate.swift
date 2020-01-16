@@ -65,9 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             // ...
 //            save data to userDefaults
-            UserDefaults.standard.set(UserDefaultsEnum.userid.rawValue, forKey: userID ?? "Login fail")
-            UserDefaults.standard.set(UserDefaultsEnum.name.rawValue, forKey: fullName ?? "Login fail")
-            UserDefaults.standard.set(UserDefaultsEnum.email.rawValue, forKey: email ?? "Login fail")
+            UserDefaults.standard.set(userID, forKey: UserDefaultsEnum.userid.rawValue)
+            UserDefaults.standard.set(fullName, forKey: UserDefaultsEnum.name.rawValue)
+            UserDefaults.standard.set(email, forKey: UserDefaultsEnum.email.rawValue)
             
             selectRootController()
         }

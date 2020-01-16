@@ -54,16 +54,9 @@ class ShareViewController: UIViewController {
         
         let instagramHooks = "https://shaku.it/sharer.php?s=instagram&u=" + CustomUserDefaults.getUderId() + "&c=" + couponId
         
-        let instagramURL = NSURL(string: "instagram://app")
-        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
-            //Code
-            UIApplication.shared.open(URL(string: instagramHooks)!)
-            
-        } else {
-            //Showing message "Please install the Instagram application"
-            UIApplication.shared.open(URL(string: "http://instagram.com/")!)
+        if let url = URL(string: instagramHooks) {
+            UIApplication.shared.open(url)
         }
-        
     }
     
     @IBAction func whatsAppBtn(_ sender: UIButton) {
@@ -71,15 +64,8 @@ class ShareViewController: UIViewController {
         // https://shaku.it/sharer.php?s=whatsapp&u=
         
         let whatsappHooks = "https://shaku.it/sharer.php?s=whatsapp&u=" + CustomUserDefaults.getUderId() + "&c=" + couponId
-        
-        if let urlString = whatsappHooks.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
-            if let whatsappURL = URL(string: urlString) {
-                if UIApplication.shared.canOpenURL(whatsappURL) {
-                    UIApplication.shared.openURL(whatsappURL)
-                } else {
-                    print("Install Whatsapp")
-                }
-            }
+        if let url = URL(string: whatsappHooks) {
+            UIApplication.shared.open(url)
         }
         
     }
@@ -89,34 +75,12 @@ class ShareViewController: UIViewController {
         //        https://shaku.it/sharer.php?s=facebook&u=
         
         let facebookHooks = "https://shaku.it/sharer.php?s=facebook&u=" + CustomUserDefaults.getUderId() + "&c=" + couponId
-        
-        let shareContent = ShareLinkContent()
-        shareContent.contentURL = URL.init(string: facebookHooks)! //your link
-        //        shareContent.quote = "Text to be shared"
-        ShareDialog(fromViewController: self, content: shareContent, delegate: self as! SharingDelegate).show()
-        
-        func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
-            if sharer.shareContent.pageID != nil {
-                print("Share: Success")
-            }
+        if let url = URL(string: facebookHooks) {
+            UIApplication.shared.open(url)
         }
-        func sharer(_ sharer: Sharing, didFailWithError error: Error) {
-            print("Share: Fail")
-        }
-        func sharerDidCancel(_ sharer: Sharing) {
-            print("Share: Cancel")
-        }
-        
-        //        let facebookURL = NSURL(string: "facebook://app")
-        //        if UIApplication.shared.canOpenURL(facebookURL! as URL) {
-        //            //Code
-        //            UIApplication.shared.open(URL(string: facebookHooks)!)
-        //
-        //        } else {
-        //            //Showing message "Please install the Instagram application"
-        //            UIApplication.shared.open(URL(string: "http://facebook.com/")!)
-        //        }
         
     }
     
 }
+
+

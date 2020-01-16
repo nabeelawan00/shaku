@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleSignIn
+import IQKeyboardManager
+import IQKeyboardManagerSwift
 
 class LoginViewController: UIViewController {
 
